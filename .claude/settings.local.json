@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh repo *)",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "Bash(mv \"Workflow-CI\" \"Workflow-CI_backup\")",
+      "Bash(git submodule *)",
+      "Bash(mv Workflow-CI Workflow-CI_tmp && git submodule add https://github.com/luhung004/Workflow-CI-HeartDisease.git Workflow-CI)",
+      "Bash(git add *)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\ASUS VIVOBOOK\\Downloads\\SMSML_Luhung_Pandyaska-Suyi\\Workflow-CI"
+    ]
+  }
+}
