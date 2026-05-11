@@ -1,2 +1,1 @@
-Link DagsHub Repository: https://dagshub.com/luhung004/SMSML-Luhung-Pandyaska-Suyi
-MLflow Tracking URI: https://dagshub.com/luhung004/SMSML-Luhung-Pandyaska-Suyi.mlflow
+https://dagshub.com/luhung004/Eksperimen_SML_Luhung-Pandyaska-Suyi
