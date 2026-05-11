@@ -1,0 +1,10 @@
+artifact_location: file:C:\Users\ASUS VIVOBOOK\Downloads\SMSML_Luhung_Pandyaska-Suyi\mlruns/157577538748465911/models/m-e9b12c564b354621b55e8ac150e8ea8b/artifacts
+creation_timestamp: 1778506783364
+experiment_id: '157577538748465911'
+last_updated_timestamp: 1778506797518
+model_id: m-e9b12c564b354621b55e8ac150e8ea8b
+model_type: null
+name: model
+source_run_id: 82b3098668c149b9af9229b5214b5556
+status: 2
+status_message: null

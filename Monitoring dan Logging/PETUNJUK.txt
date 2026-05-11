@@ -1,0 +1,25 @@
+CARA MENDAPATKAN SCREENSHOT (KRITERIA 4 ADVANCE):
+
+1. Serving Model:
+   - Run: mlflow models serve -m "runs:/<RUN_ID>/model" -p 5001 --no-conda
+   - Run: python 7.inference.py
+   - Screenshot terminal yang menunjukkan hasil prediksi. Simpan di: 1.bukti_serving/
+
+2. Prometheus:
+   - Run: python 3.prometheus_exporter.py
+   - Jalankan Prometheus (prometheus.exe --config.file=2.prometheus.yml)
+   - Buka localhost:9090, cari metrik (misal: model_accuracy).
+   - Screenshot grafik metrik. Simpan di: 4.bukti monitoring Prometheus/
+
+3. Grafana (PENTING):
+   - Jalankan Grafana, tambah DataSource Prometheus (localhost:9090).
+   - Buat Dashboard dengan NAMA USERNAME DICODING ANDA.
+   - Buat 10 Panel untuk 10 metrik yang ada di 3.prometheus_exporter.py.
+   - Screenshot dashboard tersebut. Simpan di: 5.bukti monitoring Grafana/
+
+4. Alerting (ADVANCE):
+   - Di Grafana, buat 3 Alert Rules (misal: Latency > 0.5s, Accuracy < 0.7, Error Rate > 0).
+   - Screenshot halaman "Alert Rules" dan screenshot "Notification" (saat alert firing).
+   - Simpan di: 6.bukti alerting Grafana/
+
+SEMUA SCREENSHOT HARUS JELAS DAN MENUNJUKKAN NAMA ANDA (DI DASHBOARD).

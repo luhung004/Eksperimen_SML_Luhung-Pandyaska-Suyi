@@ -1,0 +1,14 @@
+artifact_uri: file:C:\Users\ASUS VIVOBOOK\Downloads\SMSML_Luhung_Pandyaska-Suyi\mlruns/157577538748465911/ec9ec53abaf5434d80639bc711f30e71/artifacts
+end_time: 1778506180928
+entry_point_name: ''
+experiment_id: '157577538748465911'
+lifecycle_stage: active
+run_id: ec9ec53abaf5434d80639bc711f30e71
+run_name: Basic_RandomForest_HeartDisease
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1778506085672
+status: 3
+tags: []
+user_id: ASUS VIVOBOOK

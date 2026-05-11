@@ -21,16 +21,20 @@ DAGSHUB_USER = "luhung004"
 DAGSHUB_REPO = "SMSML-Luhung-Pandyaska-Suyi"
 
 # Inisialisasi Dagshub untuk MLflow tracking
-# dagshub.init(repo_owner=DAGSHUB_USER, repo_name=DAGSHUB_REPO, mlflow=True)
-# mlflow.set_tracking_uri(f"https://dagshub.com/{DAGSHUB_USER}/{DAGSHUB_REPO}.mlflow")
+dagshub.init(repo_owner='luhung004', repo_name='Eksperimen_SML_Luhung-Pandyaska-Suyi', mlflow=True)
+mlflow.set_tracking_uri("https://dagshub.com/luhung004/Eksperimen_SML_Luhung-Pandyaska-Suyi.mlflow")
 
 # Untuk lokal/latihan, gunakan tracking uri lokal jika DagsHub belum siap
-mlflow.set_tracking_uri("http://127.0.0.1:5000")
+# mlflow.set_tracking_uri("http://127.0.0.1:5000")
 mlflow.set_experiment("Heart Disease Tuning")
 
 # Load data
 data_path = os.path.join(os.path.dirname(__file__), 'dataset_processed.joblib')
 X_train, X_test, y_train, y_test = joblib.load(data_path)
+
+# Pastikan target biner (0 = Sehat, 1 = Sakit)
+y_train = (y_train > 0).astype(int)
+y_test = (y_test > 0).astype(int)
 
 # Definisikan Hyperparameter Space
 param_grid = {

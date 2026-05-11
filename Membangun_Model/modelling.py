@@ -10,14 +10,19 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 
-# Set tracking URI & nama eksperimen 
-mlflow.set_tracking_uri("http://127.0.0.1:5000")
+# Set tracking URI & nama eksperimen
+# mlflow.set_tracking_uri("http://127.0.0.1:5000")
+tracking_uri = "file:" + os.path.join(os.getcwd(), "mlruns")
+mlflow.set_tracking_uri(tracking_uri)
 mlflow.set_experiment("Latihan Model Heart Disease")
 
-# Load data hasil preprocessing (Section 5)
-X_train, X_test, y_train, y_test = joblib.load(
-    os.path.join('HeartDisease_processing', 'processed_data.pkl')
-)
+# Load data hasil preprocessing
+data_path = os.path.join(os.path.dirname(__file__), 'dataset_processed.joblib')
+X_train, X_test, y_train, y_test = joblib.load(data_path)
+
+# Pastikan target biner (0 = Sehat, 1 = Sakit)
+y_train = (y_train > 0).astype(int)
+y_test = (y_test > 0).astype(int)
 
 print(f"Ukuran X_train : {X_train.shape}")
 print(f"Ukuran X_test  : {X_test.shape}")
